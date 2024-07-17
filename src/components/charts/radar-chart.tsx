@@ -17,21 +17,26 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
+
+function genRandom(base: number) {
+  return Math.floor(Math.random() * base) + 3
+
+}
 const chartData = [
-  { month: "January", desktop: 186 },
-  { month: "February", desktop: 285 },
-  { month: "March", desktop: 237 },
-  { month: "April", desktop: 203 },
-  { month: "May", desktop: 209 },
-  { month: "June", desktop: 264 },
+  { month: "January", desktop: genRandom(186) },
+  { month: "February", desktop: genRandom(285) },
+  { month: "March", desktop: genRandom(237) },
+  { month: "April", desktop: genRandom(203) },
+  { month: "May", desktop: genRandom(209) },
+  { month: "June", desktop: genRandom(264) },
 ]
 
 const chartConfig = {
   desktop: {
     label: "Desktop",
-    color: "hsl(var(--chart-1))",
+    color: "blue",
   },
-} satisfies ChartConfig
+} as ChartConfig
 
 export function RadarChartz() {
   return (

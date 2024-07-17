@@ -5,8 +5,9 @@ const { chromium } = require('playwright');
   const browser = await chromium.launch();
   const context = await browser.newContext({
     recordVideo: {
-      dir: 'videos/' // Directory to store videos
-    }
+      dir: 'videos/', // Directory to store videos
+      size: { width: 1280, height: 720 } // Set video size to 1280x720 (HD)
+      }
   });
   const page = await context.newPage();
 

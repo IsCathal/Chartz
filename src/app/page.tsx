@@ -4,6 +4,7 @@ import Image from "next/image";
 import { RadialChartz } from '@/components/charts/radiacl-chart'; // Adjust the import path as necessary
 import { AreaChartz } from '@/components/charts/area-chart'; // Adjust the import path as necessary
 import { RadarChartz } from '@/components/charts/radar-chart'; // Adjust the import path as necessary
+import { PieChartz } from '@/components/charts/pie-chart'; // Adjust the import path as necessary
 import { useState, useEffect } from 'react';
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentChart((prevChart) => (prevChart + 1) % 3);
+      setCurrentChart((prevChart) => (prevChart + 1) % 4);
     }, 2000);
 
     return () => clearInterval(interval);
@@ -20,11 +21,13 @@ export default function Home() {
   const renderChart = () => {
     switch (currentChart) {
       case 0:
-        return <RadarChartz />;
+        return <RadialChartz />;
       case 1:
         return <AreaChartz />;
       case 2:
-        return <RadialChartz />;
+        return <RadarChartz />;
+      case 3:
+        return <PieChartz />;
       default:
         return null;
     }
