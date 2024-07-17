@@ -78,16 +78,10 @@ Playwright is used in this project to record and showcase the interactions with 
 
 To use Playwright for recording chart interactions:
 
-1. Run Playwright tests:
+1. Record interactions:
 
 ```sh
-npx playwright test
-```
-
-2. Record interactions:
-
-```sh
-npx playwright codegen http://localhost:3000
+node test.js
 ```
 
 This will open a browser where you can interact with the charts and record those interactions. The recorded script can then be used to showcase the chart's functionality in a demo or documentation.
