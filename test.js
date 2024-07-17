@@ -7,6 +7,8 @@ const { chromium } = require('playwright');
     recordVideo: {
       dir: 'videos/', // Directory to store videos
       size: { width: 1280, height: 720 } // Set video size to 1280x720 (HD)
+      // size: { width: 3840, height: 2160 } // Set video size to 3840x2160 (4K)
+
       }
   });
   const page = await context.newPage();
