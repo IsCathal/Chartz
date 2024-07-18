@@ -89,3 +89,7 @@ This will open a browser where you can interact with the charts and record those
 ## Conclusion
 
 Chartz demonstrates how to build a modern web application with powerful data visualization capabilities. By leveraging Next.js, React, and Recharts, this project showcases the potential of creating dynamic and interactive charts. Additionally, Playwright provides robust recording functionalities to showcase and document the chart interactions effectively.
+
+## For 60 fps
+
+brew install ffmpeg
